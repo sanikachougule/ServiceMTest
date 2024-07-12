@@ -1,0 +1,34 @@
+<ng-container *ngIf="proObj">
+    <mat-card class="mb-4 bg-secondary card">
+        <mat-card-header>
+           <mat-card-title class="font-weight-bold">
+            {{proObj.pname}}
+           </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p class="mb-2">
+                The Product Name is <strong>{{proObj.pname}}</strong> and its 
+                Status: <strong>{{proObj.pstatus}}</strong>
+            </p>
+            <p>
+                <strong>Details: {{proObj.pdetails}}</strong>
+            </p>
+        </mat-card-content>
+        <mat-card-actions class="d-flex justify-content-between">
+            <button
+            (click)="onProductUpdate(ProductStatusEnum.InProgress)"
+            mat-raised-button color="primary">InProgress</button>
+
+            <button 
+            (click)="onProductUpdate(ProductStatusEnum.Dispatched)"
+            mat-raised-button color="primary">Dispatched</button>
+
+            <button
+            (click)="onProductUpdate(ProductStatusEnum.Delivery)"
+            mat-raised-button color="primary">Delivery</button>
+            
+        </mat-card-actions>
+    </mat-card>
+</ng-container>
+
+

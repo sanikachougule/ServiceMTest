@@ -1,0 +1,8 @@
+<app-product-form></app-product-form>
+
+<div class="d-flex flex-column-reverse mt-5">
+    <app-product-card 
+[proObj]="product"
+*ngFor="let product of productArr"></app-product-card>
+
+</div>

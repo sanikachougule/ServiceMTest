@@ -1,0 +1,14 @@
+<app-passanger-count 
+[getTotalCount]="totalCount"
+[getCheckInCount]="checkInCount"
+></app-passanger-count>
+
+<ul class="list-group mb-4">
+    <li class="list-group-item"*ngFor="let passanger of passArray" >
+       {{passanger.fullname}}
+    </li>
+</ul>
+
+<app-passanger-card 
+(emitRemoveMsg)="getCount()"
+[passObj]="passanger" *ngFor="let passanger of passArray"></app-passanger-card>
